@@ -99,7 +99,7 @@ function LinkedList() {
       str += `( ${curr.data} ) -> `;
       curr = curr.next;
     }
-    console.log(`${str}null`);
+    return `${str}null`;
   };
 
   this.insertAt = (value, index) => {
@@ -152,29 +152,21 @@ list.addValue(3);
 list.prependValue(0);
 list.prependValue(-1);
 list.addValue(4);
-console.log('Initial list: ');
-list.toString();
-
+console.log(`Initial list: ${list.toString()}`);
 console.log(`Size: ${list.listSize()}`);
 console.log(`Head: ${list.listHead()}`);
 console.log(`Tail: ${list.listTail()}`);
 console.log(`atIndex(${index}): ${list.atIndex(index)}`);
 list.pop();
 list.pop();
-console.log('After popping elements twice from the list: ');
-list.toString();
+console.log(`After popping elements twice from the list: ${list.toString()}`);
 console.log(`Size: ${list.listSize()}`);
 console.log(`Contains Value (2): ${list.containsValue(2)}`);
 console.log(`Contains Value (12): ${list.containsValue(12)}`);
-console.log(`find (1): ${list.find(1)}`);
-list.toString();
-
+console.log(`find (1): index: ${list.find(1)}`);
 list.insertAt(3, 4);
-console.log(`After inserting element 3 at index 4: `);
-list.toString();
+console.log(`After inserting element 3 at index 4: ${list.toString()}`);
 console.log(`Size: ${list.listSize()}`);
-
 list.removeAt(3);
-console.log(`After removing an element from index 3: `);
-list.toString();
+console.log(`After removing an element from index 3: ${list.toString()}`);
 console.log(`Size: ${list.listSize()}`);
